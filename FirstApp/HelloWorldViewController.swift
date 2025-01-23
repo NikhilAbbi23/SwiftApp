@@ -10,10 +10,11 @@ import UIKit
 class HelloWorldViewController: UIViewController {
 
     @IBOutlet weak var logOutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        logOutButton.addTarget(self, action: #selector(logOut), for: .touchUpInside)
         
-       logOutButton.addTarget(self, action: #selector(logOut), for: .touchUpInside)
     }
     @objc func logOut() {
         UserDefaults.standard.removeObject(forKey: "loggedInUsername")

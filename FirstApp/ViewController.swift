@@ -49,12 +49,12 @@ class ViewController: UIViewController {
             return
         }
         
-        
         if let navigationController = navigationController {
             navigationController.pushViewController(helloWorldVC, animated: true)
         } else {
             print("Error: Navigation controller is not available")
         }
+        
     }
     private func showAlert(title: String, message: String,completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -70,6 +70,7 @@ class ViewController: UIViewController {
             //user is logged in. stay on sign in screen
         }
     }
+    
     
 }
 
