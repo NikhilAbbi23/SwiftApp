@@ -12,8 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
 
-    
-    
     @IBAction func signInTapped(_ sender: UIButton) {
         guard let username = usernameTextfield.text, !username.isEmpty,
               let password = passwordTextfield.text, !password.isEmpty
@@ -66,9 +64,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         if let loggedInUsername = UserDefaults.standard.string(forKey: "loggedInUsername"), UserDefaults.standard.bool(forKey: "isLoggedIn") {
             navigateToHelloWorld()
-        } else {
-            //user is logged in. stay on sign in screen
-        }
+        } 
     }
     
     

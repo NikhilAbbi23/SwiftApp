@@ -70,11 +70,9 @@ class SignUpViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
                 if let signInVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-                    // If your SignUpViewController is inside a navigation controller, this will push.
                     if let navigationController = self.navigationController {
                         navigationController.pushViewController(signInVC, animated: true)
                     } else {
-                        // If not in a navigation controller, present the SignIn screen modally.
                         self.present(signInVC, animated: true, completion: nil)
                     }
                 }
